@@ -1,0 +1,64 @@
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git log --oneline
+9844403 (HEAD -> master, origin/master) kata12 added
+8d46f38 kata11 modified
+ebcd00d kata10
+b59e965 kata8 added
+e2e4e77 (greeting) kata7 added
+8786978 in master
+6843ee8 in master
+5512dd5 (Mergesort-Impl) in mergesort branch
+f112f9c kata6 added
+d107ab4 merge conflct resolved
+e19c7ae (mybranch) in branch touch
+5fdc742 in master touch
+e6f18f8 kata 5 done
+90ab6a0 Merge branch 'greeting'--yes
+a51d3a8 readme file
+dbbe73d gretting branch
+b96d67a kata4added
+1079d31 add greeting
+7a655fc adding kata3
+85aa5bf file1 added
+89ae26b kata2 done
+13fe83f modeified
+ce5234c going to push
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git rebase -i HEAD~3
+[detached HEAD 4be1dd0] done squashing
+ Date: Mon Jan 23 20:59:22 2023 +0530
+ 3 files changed, 72 insertions(+)
+ create mode 100644 clean.txt
+ create mode 100644 kata11
+ create mode 100644 kata12
+Successfully rebased and updated refs/heads/master.
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git log --oneline
+4be1dd0 (HEAD -> master) done squashing
+ebcd00d kata10
+b59e965 kata8 added
+e2e4e77 (greeting) kata7 added
+8786978 in master
+6843ee8 in master
+5512dd5 (Mergesort-Impl) in mergesort branch
+f112f9c kata6 added
+d107ab4 merge conflct resolved
+e19c7ae (mybranch) in branch touch
+5fdc742 in master touch
+e6f18f8 kata 5 done
+90ab6a0 Merge branch 'greeting'--yes
+a51d3a8 readme file
+dbbe73d gretting branch
+b96d67a kata4added
+1079d31 add greeting
+7a655fc adding kata3
+85aa5bf file1 added
+89ae26b kata2 done
+13fe83f modeified
+ce5234c going to push
+7d888df test modified
+
+
