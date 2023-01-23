@@ -1,0 +1,93 @@
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git branch feature
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git switch feature
+Switched to branch 'feature'
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (feature)
+$ git status
+On branch feature
+nothing to commit, working tree clean
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (feature)
+$ echo greetings >greeting.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (feature)
+$ git add .
+warning: in the working copy of 'greeting.txt', LF will be replaced by CRLF the next time Git touches it
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (feature)
+$ git status
+On branch feature
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   greeting.txt
+
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (feature)
+$ git commit -m "add greeting"
+[feature 1079d31] add greeting
+ 1 file changed, 1 insertion(+)
+ create mode 100644 greeting.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (feature)
+$ git branch
+* feature
+  master
+  mybranch
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (feature)
+$ git log --oneline --graph --all
+* 1079d31 (HEAD -> feature) add greeting
+* 7a655fc (origin/master, master) adding kata3
+| * 85aa5bf (mybranch) file1 added
+|/
+* 89ae26b kata2 done
+* 13fe83f modeified
+* ce5234c going to push
+* 7d888df test modified
+* 96c7c2b test commited
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (feature)
+$ git switch master
+Switched to branch 'master'
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ cat greeting.txt
+cat: greeting.txt: No such file or directory
+
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git diff master feature
+diff --git a/greeting.txt b/greeting.txt
+new file mode 100644
+index 0000000..070e4c8
+--- /dev/null
++++ b/greeting.txt
+@@ -0,0 +1 @@
++greetings
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git merge feature
+Updating 7a655fc..1079d31
+Fast-forward
+ greeting.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 greeting.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ cat greeting.txt
+greetings
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git branch -d feature
+Deleted branch feature (was 1079d31).
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git branch
+* master
+  mybranch
+
+
