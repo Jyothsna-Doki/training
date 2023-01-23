@@ -1,0 +1,37 @@
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ touch clean.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ touch clean1.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git add clean.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ ls -R
+.:
+clean.txt   file1.txt       greeting.txt  kata3  kata6  readme.md
+clean1.txt  file1.txt.orig  kata10        kata4  kata7  test.txt
+file.txt    file2.txt       kata2         kata5  kata8  touch.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git clean -n
+Would remove clean1.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git clean -n -d
+Would remove clean1.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git clean -f -d
+Removing clean1.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ ls -R
+.:
+clean.txt  file1.txt.orig  kata10  kata4  kata7      test.txt
+file.txt   file2.txt       kata2   kata5  kata8      touch.txt
+file1.txt  greeting.txt    kata3   kata6  readme.md
+
+
