@@ -1,0 +1,127 @@
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git branch greeting
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git switch greeting
+Switched to branch 'greeting'
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (greeting)
+$ git add .
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (greeting)
+$ vi greeting.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (greeting)
+$ git add .
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (greeting)
+$ git commit -m "gretting branch"
+[greeting dbbe73d] gretting branch
+ 1 file changed, 2 insertions(+)
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (greeting)
+$ git switch master
+Switched to branch 'master'
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ touch readme.md
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ vi readme.md
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git add .
+warning: in the working copy of 'readme.md', LF will be replaced by CRLF the next time Git touches it
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git commit -m "readme file"
+[master a51d3a8] readme file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.md
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git log --oneline --graph --all
+* a51d3a8 (HEAD -> master) readme file
+| * dbbe73d (greeting) gretting branch
+|/
+* b96d67a (origin/master) kata4added
+* 1079d31 add greeting
+* 7a655fc adding kata3
+| * 85aa5bf (mybranch) file1 added
+|/
+* 89ae26b kata2 done
+* 13fe83f modeified
+* ce5234c going to push
+* 7d888df test modified
+* 96c7c2b test commited
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git branch
+  greeting
+* master
+  mybranch
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git diff greeting mybranch
+diff --git a/file1.txt b/file1.txt
+new file mode 100644
+index 0000000..f8e6a04
+--- /dev/null
++++ b/file1.txt
+@@ -0,0 +1 @@
++Jyothsna
+diff --git a/file2.txt b/file2.txt
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/greeting.txt b/greeting.txt
+deleted file mode 100644
+index 2646ab8..0000000
+--- a/greeting.txt
++++ /dev/null
+@@ -1,3 +0,0 @@
+-greetings
+-edited
+-
+diff --git a/kata3 b/kata3
+deleted file mode 100644
+index a5a725b..0000000
+--- a/kata3
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git merge greeting
+Merge made by the 'ort' strategy.
+ greeting.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git log --oneline --graph --all
+*   90ab6a0 (HEAD -> master) Merge branch 'greeting'--yes
+|\
+| * dbbe73d (greeting) gretting branch
+* | a51d3a8 readme file
+|/
+* b96d67a (origin/master) kata4added
+* 1079d31 add greeting
+* 7a655fc adding kata3
+| * 85aa5bf (mybranch) file1 added
+|/
+* 89ae26b kata2 done
+* 13fe83f modeified
+* ce5234c going to push
+* 7d888df test modified
+* 96c7c2b test commited
+
+
