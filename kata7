@@ -1,0 +1,66 @@
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git branch
+  greeting
+* master
+  mybranch
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git checkout -b Mergesort-Impl
+Switched to a new branch 'Mergesort-Impl'
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (Mergesort-Impl)
+$ ls
+file.txt   file2.txt     kata2  kata4  kata6      test.txt
+file1.txt  greeting.txt  kata3  kata5  readme.md  touch.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (Mergesort-Impl)
+$ vi file1.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (Mergesort-Impl)
+$ git add .
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (Mergesort-Impl)
+$ git commit -m "in mergesort branch"
+[Mergesort-Impl 5512dd5] in mergesort branch
+ 1 file changed, 1 insertion(+)
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (Mergesort-Impl)
+$ git switch master
+Switched to branch 'master'
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master|MERGING)
+$ git merge Mergesort-Impl
+fatal: You have not concluded your merge (MERGE_HEAD exists).
+Please, commit your changes before you merge.
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master|MERGING)
+$ git add .
+[master 6843ee8] in master
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master|MERGING)
+$ git commit -m "in master"
+[master 8786978] in masterP08 MINGW64 /f/Training (master)
+$ git merge Mergesort-Impl
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git merge Mergesort-Impl
+Already up to date.led; fix conflicts and then commit the result.
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)MERGING)
+$ git mergetool --tool=vimdiff
+No files need merging
+file1.txt
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git status
+On branch masteried file
+nothing to commit, working tree clean
+4 files to edit
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ cat file1.txt
+Jyothsna
+
+
+merge -mergesort
+>>>>>>> Mergesort-Impl
+
+
