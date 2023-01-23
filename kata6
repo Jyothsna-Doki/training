@@ -1,0 +1,107 @@
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ ls
+file.txt   greeting.txt  kata3  kata5      test.txt
+file2.txt  kata2         kata4  readme.md  touch.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ cat touch.txt
+basic stagging
+
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ vi touch.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git add .
+warning: in the working copy of 'touch.txt', LF will be replaced by CRLF the next time Git touches it
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git commit -m "in master touch"
+[master 5fdc742] in master touch
+ 1 file changed, 1 insertion(+)
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git branch
+  greeting
+* master
+  mybranch
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git switch mybranch
+Switched to branch 'mybranch'
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (mybranch)
+$ cat touch.txt
+basic stagging
+
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (mybranch)
+$ vi touch.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (mybranch)
+$ git add .
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (mybranch)
+$ git commit -m "in branch touch "
+[mybranch e19c7ae] in branch touch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (mybranch)
+$ git switch master
+Switched to branch 'master'
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git merge mybranch
+Auto-merging touch.txt
+CONFLICT (content): Merge conflict in touch.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master|MERGING)
+$ vi touch.txt
+
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master|MERGING)
+$ git add .
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master|MERGING)
+$ git commit -m "merge conflct resolved"
+[master d107ab4] merge conflct resolved
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git merge mybranch
+Already up to date.
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ cat touch.txt
+basic stagging
+<<<<<<< HEAD
+modified touch
+
+
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git log --oneline --graph
+*   d107ab4 (HEAD -> master) merge conflct resolved
+|\
+| * e19c7ae (mybranch) in branch touch
+| * 85aa5bf file1 added
+* | 5fdc742 in master touch
+* | e6f18f8 (origin/master) kata 5 done
+* |   90ab6a0 Merge branch 'greeting'--yes
+|\ \
+| * | dbbe73d (greeting) gretting branch
+* | | a51d3a8 readme file
+|/ /
+* | b96d67a kata4added
+* | 1079d31 add greeting
+* | 7a655fc adding kata3
+|/
+* 89ae26b kata2 done
+* 13fe83f modeified
+* ce5234c going to push
+* 7d888df test modified
+* 96c7c2b test commited
+
+
+
