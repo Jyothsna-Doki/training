@@ -1,0 +1,149 @@
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git log --oneline
+b953dea (HEAD -> master, origin/master) kata9
+210cadc This reverts commit 1a9a6ea0402fe30c9db0c7cc00142d051c76de19.
+1a9a6ea in reverting
+b59e965 kata8 added
+e2e4e77 (greeting) kata7 added
+8786978 in master
+6843ee8 in master
+5512dd5 (Mergesort-Impl) in mergesort branch
+f112f9c kata6 added
+d107ab4 merge conflct resolved
+e19c7ae (mybranch) in branch touch
+5fdc742 in master touch
+e6f18f8 kata 5 done
+90ab6a0 Merge branch 'greeting'--yes
+a51d3a8 readme file
+dbbe73d gretting branch
+b96d67a kata4added
+1079d31 add greeting
+7a655fc adding kata3
+85aa5bf file1 added
+89ae26b kata2 done
+13fe83f modeified
+ce5234c going to push
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git reset --soft HEAD~1
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   kata9
+
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ cat kata9
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ rm kata9
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git log --oneline
+210cadc (HEAD -> master) This reverts commit 1a9a6ea0402fe30c9db0c7cc00142d051c76de19.
+1a9a6ea in reverting
+b59e965 kata8 added
+e2e4e77 (greeting) kata7 added
+8786978 in master
+6843ee8 in master
+5512dd5 (Mergesort-Impl) in mergesort branch
+f112f9c kata6 added
+d107ab4 merge conflct resolved
+e19c7ae (mybranch) in branch touch
+5fdc742 in master touch
+e6f18f8 kata 5 done
+90ab6a0 Merge branch 'greeting'--yes
+a51d3a8 readme file
+dbbe73d gretting branch
+b96d67a kata4added
+1079d31 add greeting
+7a655fc adding kata3
+85aa5bf file1 added
+89ae26b kata2 done
+13fe83f modeified
+ce5234c going to push
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   kata9
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    kata9
+
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git reset --mixed HEAD~1
+Unstaged changes after reset:
+M       greeting.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git log --oneline
+1a9a6ea (HEAD -> master) in reverting
+b59e965 kata8 added
+e2e4e77 (greeting) kata7 added
+8786978 in master
+6843ee8 in master
+5512dd5 (Mergesort-Impl) in mergesort branch
+f112f9c kata6 added
+d107ab4 merge conflct resolved
+e19c7ae (mybranch) in branch touch
+5fdc742 in master touch
+e6f18f8 kata 5 done
+90ab6a0 Merge branch 'greeting'--yes
+a51d3a8 readme file
+dbbe73d gretting branch
+b96d67a kata4added
+1079d31 add greeting
+7a655fc adding kata3
+85aa5bf file1 added
+89ae26b kata2 done
+13fe83f modeified
+ce5234c going to push
+7d888df test modified
+96c7c2b test commit
+
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git reset --hard HEAD~1
+HEAD is now at b59e965 kata8 added
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git log --oneline
+b59e965 (HEAD -> master) kata8 added
+e2e4e77 (greeting) kata7 added
+8786978 in master
+6843ee8 in master
+5512dd5 (Mergesort-Impl) in mergesort branch
+f112f9c kata6 added
+d107ab4 merge conflct resolved
+e19c7ae (mybranch) in branch touch
+5fdc742 in master touch
+e6f18f8 kata 5 done
+90ab6a0 Merge branch 'greeting'--yes
+a51d3a8 readme file
+dbbe73d gretting branch
+b96d67a kata4added
+1079d31 add greeting
+7a655fc adding kata3
+85aa5bf file1 added
+89ae26b kata2 done
+13fe83f modeified
+ce5234c going to push
+7d888df test modified
+96c7c2b test commited
+
+
