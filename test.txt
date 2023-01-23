@@ -1,1 +1,102 @@
-hello
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training
+$ git init
+Initialized empty Git repository in F:/Training/.git/
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ touch test.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git add .
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   test.txt
+
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git commit -m "test commited"
+[master (root-commit) 96c7c2b] test commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ vi test.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git add .
+warning: in the working copy of 'test.txt', LF will be replaced by CRLF the next time Git touches it
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   test.txt
+
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git commit -m "test modified"
+[master 7d888df] test modified
+ 1 file changed, 1 insertion(+)
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git log
+commit 7d888df0868ed454fac1b528312ec1c17295b857 (HEAD -> master)
+Author: JyothsnaDoki <Jyothsna.Doki@zemosolabs.com>
+Date:   Mon Jan 23 17:55:04 2023 +0530
+
+    test modified
+
+commit 96c7c2b3a4936ab028ae853765d5580ce03bf7ec
+Author: JyothsnaDoki <Jyothsna.Doki@zemosolabs.com>
+Date:   Mon Jan 23 17:53:55 2023 +0530
+
+    test commited
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git remote add origin git@github.com:Jyothsna-Doki/training.git
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git remote -v
+origin  git@github.com:Jyothsna-Doki/training.git (fetch)
+origin  git@github.com:Jyothsna-Doki/training.git (push)
+
