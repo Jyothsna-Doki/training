@@ -1,0 +1,99 @@
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git branch
+* master
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git branch mybranch
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git branch
+* master
+  mybranch
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git switch mybranch
+Switched to branch 'mybranch'
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (mybranch)
+$ git status
+On branch mybranch
+nothing to commit, working tree clean
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (mybranch)
+$ echo Jyothsna > file1.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (mybranch)
+$ git add .
+warning: in the working copy of 'file1.txt', LF will be replaced by CRLF the next time Git touches it
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (mybranch)
+$ git commit -m "file1 added"
+[mybranch 85aa5bf] file1 added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file1.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (mybranch)
+$ git log --oneline --graph
+* 85aa5bf (HEAD -> mybranch) file1 added
+* 89ae26b (origin/master, master) kata2 done
+* 13fe83f modeified
+* ce5234c going to push
+* 7d888df test modified
+* 96c7c2b test commited
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (mybranch)
+$ git switch master
+Switched to branch 'master'
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git log --oneline --graph
+* 89ae26b (HEAD -> master, origin/master) kata2 done
+* 13fe83f modeified
+* ce5234c going to push
+* 7d888df test modified
+* 96c7c2b test commited
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ touch file2.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git log --oneline --graph --all
+* 85aa5bf (mybranch) file1 added
+* 89ae26b (HEAD -> master, origin/master) kata2 done
+* 13fe83f modeified
+* ce5234c going to push
+* 7d888df test modified
+* 96c7c2b test commited
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (master)
+$ git switch mybranch
+Switched to branch 'mybranch'
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (mybranch)
+$ ls
+file.txt  file1.txt  file2.txt  kata2  test.txt  touch.txt
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (mybranch)
+$ git diff mybranch master
+diff --git a/file1.txt b/file1.txt
+deleted file mode 100644
+index f8e6a04..0000000
+--- a/file1.txt
++++ /dev/null
+@@ -1 +0,0 @@
+-Jyothsna
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (mybranch)
+$ git log --oneline --graph --all
+* 85aa5bf (HEAD -> mybranch) file1 added
+* 89ae26b (origin/master, master) kata2 done
+* 13fe83f modeified
+* ce5234c going to push
+* 7d888df test modified
+* 96c7c2b test commited
+
+DOKI JYOTHSNA@LAPTOP-SPD12P08 MINGW64 /f/Training (mybranch)
+$ git switch master
+Switched to branch 'master'
+
